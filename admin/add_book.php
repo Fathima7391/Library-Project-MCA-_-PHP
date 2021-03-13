@@ -50,16 +50,13 @@
      if(!$con){
          echo "Connection Error !!";
      }
-	 
+
 		$res=mysqli_query($con,"select * from book_details order by book_id desc limit 1");
 		while($result=mysqli_fetch_array($res)){
-		$book_id =$result['book_id']; 
-		$book_id++;		
-		
-        	
+		    $book_id =$result['book_id']; 
+		    $book_id++;		
 		}
         	
-
     if(isset($_POST['submit'])){
 		$book_name = $_POST['book_name'];  
         $book_author = $_POST['book_author'];  
@@ -68,7 +65,7 @@
 
         $query = "insert into book_details values('$book_id','$book_name','$book_author','$book_edition','$book_publisher',0)";
             if(mysqli_query($con,$query)){
-                echo "success";
+                header("location:view_book.php");
             }
             else{
                 echo "error".$query.mysqli_error($con);
