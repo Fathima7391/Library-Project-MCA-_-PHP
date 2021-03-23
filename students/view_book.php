@@ -17,17 +17,24 @@ session_start();
         background-color:rgba(96, 97, 93,.5);
         }
     th{
-        background-color: rgba(0, 0, 0,.5);
+        background-color:rgba(0, 0, 0,.5);
         color:white;
         
     }
+    .main-head{
+  	/*background:black;*/
+  	color:rgb(62, 62, 64);
+  	text-align:center;
+	font-family:Courier New;
+	font-size:40px;
+    }
     </style>
 </head>
-<body>
+<body><h2 class="main-head">BOOK DETAILS</h2>
 <div class="shadow">
 <div class="text-center search-div">
 <h5 class="search-here">Search here</h5>
-    </div>
+</div>
 <input type="text" name="search" id="myInput" onkeyup="myFunction()" placeholder="Search.." class="search-bar">
 <?php
     $con = Mysqli_Connect("localhost","root","","library_management");

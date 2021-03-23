@@ -3,6 +3,9 @@
 
 .search-div{
   animation: color-change1 3s infinite;
+  width:90%;
+  text-align: center;
+  margin: auto;
 
 }
 @keyframes color-change1 {
@@ -16,11 +19,14 @@ input[type=text] {
   width: 130px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+  text-align: center;
+  margin: auto;
+  display: block;
 }
 
 /* When the input field gets focus, change its width to 100% */
 input[type=text]:focus {
-  width: 100%;
+  width: 90%;
 }
 .table-bar{
     margin-left: auto;
