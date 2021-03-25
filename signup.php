@@ -14,6 +14,7 @@
         margin-top:4em;
         padding:1em;
         box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+        border-radius:15px;
     }
     tr,td,th{
         padding:1em;
@@ -35,6 +36,20 @@
     background-color: #464646;
     
     }
+    .sb-btn{
+            background-color:green;
+            border:none;
+            padding:7px;
+            border-radius:3px;
+            color:white;
+            
+            font-size:12px;
+            
+        }
+        .sb-btn:hover{
+            color:whit;
+            background:red;
+        }
 </style>
 <body>
    
@@ -68,7 +83,7 @@
                 <td><input type="password" name="passid"> </td>
             </tr>
             <tr class="center">
-                <th colspan="2"><input type="submit" value="submit" name="submit"></th>
+                <th colspan="2"><input class="sb-btn" type="submit" value="Sign Up" name="submit"></th>
             </tr>
             <tr class="center">
                 <th colspan="2"><a href="login.php" style="color:red;text-decoration:none;">Login instead ? </a></th>

@@ -16,6 +16,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 	<!-- my style -->
 	<link href="library/home.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div id="mySidenav" class="sidenav">
@@ -34,10 +35,10 @@
 	
 	</div>
 	<!-- Use any element to open the sidenav -->
-	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+	<span id="nav-bar-btn" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-home" style="font-size:36px"></i> </span>
 
 
-	<div class="contents">
+	<div class="contents" id="myiframe">
 		<iframe name="content" class="contents" src="home.php">
 				
 		</iframe>

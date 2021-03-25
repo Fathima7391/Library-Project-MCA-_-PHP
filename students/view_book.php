@@ -22,7 +22,7 @@ session_start();
         
     }
     .main-head{
-  	//background:black;
+  	/*background:black;*/
   	color:rgb(62, 62, 64);
   	text-align:center;
 	font-family:Courier New;
@@ -34,7 +34,7 @@ session_start();
 <div class="shadow">
 <div class="text-center search-div">
 <h5 class="search-here">Search here</h5>
-    </div>
+</div>
 <input type="text" name="search" id="myInput" onkeyup="myFunction()" placeholder="Search.." class="search-bar">
 <?php
     $con = Mysqli_Connect("localhost","root","","library_management");

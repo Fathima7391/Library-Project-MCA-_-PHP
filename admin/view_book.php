@@ -1,4 +1,4 @@
-<?php
+ <?php
   session_start();
   if(!isset($_SESSION['username'])){
 	  header("location:../login.php");
@@ -11,6 +11,7 @@
     <style>
     tr,td{
         padding:10px;
+        text-align:center;
     }
     .odd{
         background-color: rgba(132, 133, 127,.5);
@@ -22,11 +23,30 @@
     th{
         background-color: rgba(0, 0, 0,.5);
         color:white;
+        text-align:center;
         
+    }
+    .main-head{
+  	/*background:black;*/
+  	color:rgb(62, 62, 64);
+  	text-align:center;
+	font-family:Courier New;
+	font-size:40px;
+    }
+    .delete-btn{
+    text-decoration: none;
+    background-color: gray;
+    padding: 5px;
+    color:black;
+    border-radius:5px;
+    }
+    .delete-btn:hover{
+        background-color:red;
+        color:white;
     }
     </style>
 </head>
-<body>
+<body><h2 class="main-head">BOOK DETAILS</h2>
 <div class="shadow">
 <div class="text-center search-div">
 <h5 class="search-here">Search here</h5>
@@ -40,7 +60,8 @@
     else{
         $query = "select * from book_details";
         $values = mysqli_query($con,$query);
-        echo '<table id="myTable" style="margin-left:auto;margin-right:auto;margin-top:3em;border-collapse:collapse;"><th>ID</th><th>TITLE</th><th>AUTHOR NO</th><th>EDITION</th><th>PUBLISHER</th><th>AVAILABILITY</th>';
+        echo '<table id="myTable" style="margin-left:auto;margin-right:auto;margin-top:3em;border-collapse:collapse;"><th>ID</th><th>TITLE</th><th>AUTHOR NO</th><th>EDITION</th><th>PUBLISHER</th>
+		<th>AVAILABILITY</th><th>DELETE</th>';
         if(mysqli_num_rows($values)){
             $i = 1;
                 while($row=mysqli_fetch_assoc($values)){
@@ -75,6 +96,12 @@
                             echo "<h4 style=\"color:red;\">Not Available</h4>";
                         }
                         echo '</td>';
+						
+						echo '<td>';
+                            echo "<a class=\"delete-btn\" href=\"delete_book.php?id=$row[book_id]\"> Delete </a>";
+							
+                        echo '</td>';
+                        
                     echo '</tr>';
                     $i++;
                 }
